@@ -3,9 +3,9 @@
 const box = document.getElementById('box'),
     btns = document.getElementsByTagName('button'),
     circles = document.getElementsByClassName('circle'), // псевдомассив
-    hearts = document.querySelectorAll('.heart'), // forEach используется только тут
-    oneHeart = document.querySelector('.heart'),
-    wrapper = document.querySelector('.wrapper');
+    wrapper = document.querySelector('.wrapper'),
+    hearts = wrapper.querySelectorAll('.heart'), // forEach используется только тут
+    oneHeart = wrapper.querySelector('.heart');
 
 // box.style.backgroundColor = '#3623c3';
 // box.style.width = '500px';
@@ -33,11 +33,10 @@ btns[2].after(div); // ставит div после 3-его btns
 circles[0].remove(); // удаляет конкретный элем
 hearts[1].replaceWith(circles[0]); // заменили 2-ое hearts 1-ым circles
 
-// === Устаревшее ===
-
-
-
-
+// div.textContent = "Hello";
+div.innerHTML = "<h1>Hello</h1>";
+div.insertAdjacentHTML('beforebegin', '<h2>Bye</h2>');  // вставляет html-код перед div
+hearts[0].insertAdjacentHTML('afterend', '<h1>Bye</h1>');  // вставляет html-код после hearts[0]
 
 
 
