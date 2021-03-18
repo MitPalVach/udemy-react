@@ -7,6 +7,7 @@ function myAnimation() {
     let pos = 0;
 
     const id = setInterval(frame, 10);
+
     function frame() {
         if (pos === 300) {
             clearInterval(id);
@@ -18,9 +19,8 @@ function myAnimation() {
     }
 }
 
-
 btn.addEventListener('click', myAnimation);
-//
+
 // function logger() {
 //     if (i === 3) {
 //         clearInterval(timerId);
@@ -31,9 +31,8 @@ btn.addEventListener('click', myAnimation);
 //
 // let id = setTimeout(function log(){
 //     console.log('Hi');
-//     id = setTimeout(log, 500);
-// }, 500);
-
+//     id = setTimeout(log, 1000);
+// }, 1000);
 
 
 
